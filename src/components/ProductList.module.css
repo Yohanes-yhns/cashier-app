@@ -1,0 +1,65 @@
+/* ProductList.module.css */
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.productCard {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.productCard:hover {
+  transform: scale(1.03);
+}
+
+.productTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3c5b6f;
+  margin-bottom: 8px;
+}
+
+.productPrice {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.editButton, .deleteButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.editButton {
+  background-color: #5eabd6;
+  color: white;
+  margin-right: 5px;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+

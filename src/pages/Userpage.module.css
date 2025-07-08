@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 250px; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3c5b6f;
+}
+
+.contentBox {
+  gap:20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contentButton {
+  display: flex;
+  gap:10px;
+}
+
+.contentButton button {
+  background-color: #3c5b6f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.searchInput {
+  padding: 8px;
+  margin: 10px 0 20px;
+  width: 250px;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}

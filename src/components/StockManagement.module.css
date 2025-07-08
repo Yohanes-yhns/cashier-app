@@ -1,0 +1,51 @@
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.stockTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.stockTable th,
+.stockTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.stockTable th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+  color: #444;
+}
+
+.stockTable tr:last-child td {
+  border-bottom: none;
+}
+
+.editButton {
+  background-color: #3b82f6;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton:hover {
+  background-color: #2563eb;
+}
