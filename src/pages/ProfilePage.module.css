@@ -1,10 +1,36 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 20px;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoImage {
+  height: 70px;
+  width: auto;
+}
+
 .profileCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

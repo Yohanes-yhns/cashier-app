@@ -3,7 +3,6 @@ import {
   FaChartLine,
   FaShoppingCart,
   FaHistory,
-  FaHome,
 } from "react-icons/fa";
 import styles from "./Sidebar.module.css";
 
@@ -12,8 +11,12 @@ const Sidebar = ({ setActiveContent }) => {
     <div className={styles.sidebar}>
       <div className={styles.sidebarHeader}>
         <h2 className={styles.appTitle}>
-          <FaHome className={styles.appIcon} />
-          <span>Cash-app</span>
+          <img
+            src="/LogoSwiftPay.png"
+            alt="Logo SwiftPay"
+            className={styles.logoImage}
+          />
+          <span>SwiftPay</span>
         </h2>
       </div>
       <div className={styles.menu}>

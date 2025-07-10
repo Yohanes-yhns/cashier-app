@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, db } from "../firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import styles from "./ProfilePage.module.css";
 
 const ProfilePage = () => {
@@ -11,7 +11,7 @@ const ProfilePage = () => {
     name: "",
     email: "",
     phoneNumber: "",
-    shopName: ""
+    shopName: "",
   });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const ProfilePage = () => {
     const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        
+
         // Ambil data tambahan dari Firestore
         const userDoc = await getDoc(doc(db, "users", currentUser.uid));
         if (userDoc.exists()) {
@@ -29,7 +29,7 @@ const ProfilePage = () => {
             name: userData.name || currentUser.displayName || "",
             email: currentUser.email,
             phoneNumber: userData.phoneNumber || "",
-            shopName: userData.shopName || ""
+            shopName: userData.shopName || "",
           });
         }
       } else {
@@ -42,7 +42,7 @@ const ProfilePage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -52,14 +52,14 @@ const ProfilePage = () => {
     try {
       // Update profil auth (nama saja)
       await updateProfile(auth.currentUser, {
-        displayName: formData.name
+        displayName: formData.name,
       });
 
       // Update data di Firestore
       await updateDoc(doc(db, "users", user.uid), {
         name: formData.name,
         phoneNumber: formData.phoneNumber,
-        shopName: formData.shopName
+        shopName: formData.shopName,
       });
 
       alert("Profil berhasil diperbarui!");
@@ -75,9 +75,18 @@ const ProfilePage = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.navbar}>
+        <Link to="/user-page" className={styles.logo}>
+          <img
+            src="/LogoSwiftPay.png"
+            alt="Logo SwiftPay"
+            className={styles.logoImage}
+          />
+        </Link>
+      </div>
       <div className={styles.profileCard}>
         <h2>Profil Saya</h2>
-        
+
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
             <label>Nama Lengkap</label>
@@ -92,12 +101,7 @@ const ProfilePage = () => {
 
           <div className={styles.formGroup}>
             <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              disabled
-            />
+            <input type="email" name="email" value={formData.email} disabled />
           </div>
 
           <div className={styles.formGroup}>
@@ -120,8 +124,8 @@ const ProfilePage = () => {
             />
           </div>
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className={styles.saveButton}
             disabled={loading}
           >
