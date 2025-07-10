@@ -52,9 +52,8 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.imageSection}>
-          {/* Ganti dengan gambar dashboard/ilustrasi nantinya */}
           <img
-            src="/your-illustration.png"
+            src="/home-image.jpg"
             alt="Illustration of using SwiftPay"
             className={styles.heroImage}
           />
@@ -103,7 +102,7 @@ const Dashboard = () => {
             />
             <p className={styles.footerText}>
               SwiftPay — solusi kasir modern yang membantu kamu mengelola bisnis
-              dengan cepat, cerdas, dan aman.
+              dengan cepat dan efisien.
             </p>
           </div>
 
@@ -111,7 +110,7 @@ const Dashboard = () => {
             <h4>Menu</h4>
             <ul className={styles.footerLinks}>
               <li>
-                <a href="/">Beranda</a>
+                <a href="/">Home</a>
               </li>
               <li>
                 <a href="/login">Login</a>
