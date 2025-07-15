@@ -63,3 +63,85 @@
   color: white;
 }
 
+@media (max-width: 1024px) {
+  .listContainer {
+    justify-content: center;
+  }
+
+  .productCard {
+    width: 220px;
+    height: 220px;
+  }
+
+  .productTitle {
+    font-size: 1rem;
+  }
+
+  .productPrice {
+    font-size: 0.9rem;
+  }
+
+  .editButton,
+  .deleteButton {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    width: 45%; /* 2 kolom */
+    height: 200px;
+    padding: 12px;
+  }
+
+  .productTitle {
+    font-size: 0.95rem;
+  }
+
+  .productPrice {
+    font-size: 0.85rem;
+  }
+
+  .editButton,
+  .deleteButton {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+
+  .buttonGroup {
+    margin-top: 8px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listContainer {
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 100px;
+  }
+
+  .productCard {
+    width: 30vw; /* pas 2 kolom HP kecil */
+    height: 150px;
+    padding: 10px;
+  }
+
+  .buttonGroup {
+    margin-top: 30px;
+  }
+  .productTitle {
+    font-size: 0.9rem;
+  }
+
+  .productPrice {
+    font-size: 0.8rem;
+  }
+
+  .editButton,
+  .deleteButton {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+}

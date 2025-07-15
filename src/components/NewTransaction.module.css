@@ -77,3 +77,73 @@ button:disabled {
   border-radius: 6px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .productList {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .productItem {
+    min-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .productItem button {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cartItem input {
+    width: 100%;
+  }
+
+  .cartItem span {
+    width: 100%;
+    display: block;
+  }
+
+  .cartItem button {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .saveBtn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+    padding-bottom: 100px;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .productItem {
+    padding: 10px;
+  }
+
+  .cartItem {
+    padding: 10px;
+  }
+
+  .saveBtn {
+    font-size: 1rem;
+  }
+
+}
