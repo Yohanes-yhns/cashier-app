@@ -54,3 +54,75 @@
   border-radius: 8px;
   font-size: 14px;
 }
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 200px;
+  }
+
+  .contentButton button {
+    width: 120px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .searchInput {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contentButton {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contentButton button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .contentBox {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentBox {
+    padding: 12px;
+  }
+
+  .searchInput {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .contentButton button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .header {
+    gap: 6px;
+  }
+}

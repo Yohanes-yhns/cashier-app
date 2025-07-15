@@ -65,3 +65,150 @@
 .menuItem.active {
   background: #5eabd6;
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .logoImage {
+    height: 40px;
+  }
+
+  .appTitle {
+    font-size: 1rem;
+  }
+
+  .menuItem {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .menuIcon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+
+  .sidebarHeader {
+    border: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .sidebarMenu,
+  .stockSection {
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+
+  .menuItem {
+    padding: 8px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .menuIcon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .sidebarHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .appTitle {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .appTitle span {
+    display: none; /* Sembunyikan teks "SwiftPay" */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebarMenu,
+  .stockSection {
+    display: contents;
+  }
+
+  .menuItem {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+
+  .menuItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menuItem span {
+    display: none;
+  }
+
+  .menuIcon {
+    font-size: 20px;
+  }
+}
+

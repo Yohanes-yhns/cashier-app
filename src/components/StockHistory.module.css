@@ -38,3 +38,44 @@ h2 {
 .historyTable td:nth-child(2) {
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .historyTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .historyTable th,
+  .historyTable td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .historyTable th,
+  .historyTable td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+}
