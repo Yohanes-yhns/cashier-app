@@ -74,6 +74,7 @@
 @media (max-width: 480px) {
   .container {
     padding: 16px;
+    margin-bottom: 100px;
   }
 
   .transactionCard {
